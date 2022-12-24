@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego online de carreras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dialog">
+        <p id="icon">👻</p>
+        <h2 id="message">Completa el juego y vuelve a la vida</h2>
+        <p id="summary"></p>
+        <button class="buttonInteraction">Jugar</button>
+    </div>
+    <div class="game-container">
+
+        <canvas id="game"></canvas>
+
+        <div class="btns">
+            <button id="up">🔼</button>
+            <button id="left">◀️</button>
+            <button id="right">▶️</button>
+            <button id="down">🔽</button>
+        </div>
+
+        <div class="messages">
+            <p>Intentos: <span id="lives"></span></p>
+            <p>Tiempo: <span id="time"></span></p>
+            <p>Record: <span id="record"></span></p>
+        </div>
+    </div>
+
+    <script src="maps.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
