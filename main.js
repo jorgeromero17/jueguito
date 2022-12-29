@@ -96,7 +96,7 @@ function startGame(){
 }
 
 function movePlayer(){
-  console.log(playerPosition)
+  //console.log(playerPosition)
 
   let bombCollision = bombs.find(bomb => {
     const colissionX = bomb.x == Math.floor(playerPosition.x);
@@ -225,12 +225,15 @@ function setCanvasSize(){
     canvasSize = window.innerHeight*0.8;
   }
 
+  canvasSize = Number(canvasSize.toFixed(3));
+
   canvas.setAttribute('width',canvasSize);
   canvas.setAttribute('height',canvasSize);
 
-  elementsSize = canvasSize/10;
-  console.log(canvasSize,elementsSize)
+  elementsSize = Number((canvasSize/10).toFixed(3));
 
+  playerPosition.x = undefined;
+  playerPosition.y= undefined;
   startGame();
 }
 
